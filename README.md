@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+#Header Component Test Cases
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Test 1: Rendering Header Correctly
 
-## Available Scripts
+Description: This test verifies that the Header component renders correctly.
 
-In the project directory, you can run:
+Input: None.
+Expected Behavior: The Header component should be rendered without any errors.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#Item Component Test Cases
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Test 1: Rendering Item Correctly
 
-### `npm test`
+Description: This test verifies that the Item component renders the todo item correctly with the provided todo object.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Input: Todo object containing id, title, and completion status.
+Expected Behavior: The Item component should render the todo item with the correct title and completion status.
 
-### `npm run build`
+Test 2: Toggling Completion Status When Checkbox Is Clicked
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Description: This test ensures that the completion status of the todo item is toggled when the checkbox is clicked.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Input: Checkbox element representing the todo item's completion status.
+Expected Behavior: The completion status of the todo item should be toggled, and the corresponding dispatch function should be called with the appropriate action type and payload.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Test 3: Removing Item When Remove Button Is Clicked
 
-### `npm run eject`
+Description: This test verifies that the todo item is removed when the remove button is clicked.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Input: Remove button element.
+Expected Behavior: The todo item should be removed from the list, and the corresponding dispatch function should be called with the appropriate action type and payload.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+#Input Component Test Cases
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Test 1: Rendering Input Element with Provided Props
 
-## Learn More
+Description: This test verifies that the Input component renders an input element with the provided props, including placeholder, label, and default value.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Input: Placeholder text, label text, and default value.
+Expected Behavior: The input element should be rendered with the provided placeholder, label, and default value.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Test 2: Calling onSubmit Function with Sanitized Input Value on Enter Key Press
 
-### Code Splitting
+Description: This test ensures that the onSubmit function is called with the sanitized input value when the Enter key is pressed.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Input: Input value entered by the user.
+Expected Behavior: The onSubmit function should be called with the sanitized input value when the Enter key is pressed.
 
-### Analyzing the Bundle Size
+Test 3: Not Calling onSubmit Function on Enter Key Press with Invalid Input Length
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Description: This test verifies that the onSubmit function is not called when the Enter key is pressed and the input length is less than the minimum required length.
 
-### Making a Progressive Web App
+Input: Input value with length less than the minimum required length.
+Expected Behavior: The onSubmit function should not be called when the Enter key is pressed and the input length is less than the minimum required length.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Test 4: Calling onBlur Callback When Input Loses Focus
 
-### Advanced Configuration
+Description: This test ensures that the onBlur callback is called when the input element loses focus.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Input: Input element losing focus.
+Expected Behavior: The onBlur callback should be called when the input element loses focus.
